@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* #navbar, #subNavbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#subNavbar {
+    display: none;
+} */
+
+#content {
+    padding: 20px;
+}
+
+#progress-bar {
+    background-color: #ddd;
+    height: 20px;
+    margin-top: 10px;
+}
+
+#progress {
+    background-color: #4caf50;
+    height: 100%;
+    width: 0;
+}
+
+
+hr {
+	border:none;
+	border-top:1px solid #CCCCCC;
+	height:1px;
+	margin-bottom:25px;
+	}
+
+
+    #navbar, #subNavbar {
+        float: left;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: #ccc;
+        border-bottom: 1px solid #999;
+    }
+    
+    #navbar li, #subNavbar li {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #navbar a, #subNavbar a {
+        float: left;
+        display: block;
+        padding: 6px 30px 6px 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 90%;
+        color: #666;
+        background: #ccc url(../img/slant.gif) no-repeat top right;
+    }
+    
+    #navbar .nav-1 a {
+        padding-left: 20px;
+    }
+    
+    #navbar a:hover, #subNavbar a:hover {
+        color: #000;
+    }
+    
