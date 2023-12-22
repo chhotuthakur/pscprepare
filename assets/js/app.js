@@ -22,7 +22,7 @@ var currentChapter;
 var totalChapters;
 
 function updateProgressBar() {
-    var progress = (currentChapter / totalChapters) * 100;
+    var progress = ((currentChapter-1) / totalChapters) * 100;
     document.getElementById('progress').style.width = progress + '%';
 }
 
@@ -97,8 +97,10 @@ function loadContent() {
 
         // Display theory
         var theoryDiv = document.createElement('div');
-        theoryDiv.innerHTML = '<h2>Theory</h2>' + chapter.theory;
-        contentDiv.appendChild(theoryDiv);
+        theoryDiv.innerHTML = '<h2></h2>' + chapter.theory;
+        document.getElementById('content').innerHTML = chapter.theory;
+        autoResizeImages();
+        
 
         // Display questions and answers
         var qaDiv = document.createElement('div');
@@ -115,6 +117,7 @@ function loadContent() {
                 radioInput.setAttribute('type', 'radio');
                 radioInput.setAttribute('name', 'option' + index);
                 radioInput.setAttribute('value', optionIndex);
+                
                 optionsDiv.appendChild(radioInput);
 
                 var optionLabel = document.createElement('label');
@@ -137,7 +140,20 @@ function loadContent() {
                             loadChapters();
                         } else {
                             alert('You have completed all chapters in this unit!');
+                            var specificWord = "sample";
+
+                            if (window.alert) {
+                                var alertMessage = window.alert.toString();
+                            
+                                if (alertMessage.includes(specificWord)) {
+                                    updateProgressBar();
+                                }
+                            
                         }
+                    }
+
+
+
                     } else {
                         alert('Incorrect answer. Try again!');
                     }
@@ -160,3 +176,34 @@ function loadContent() {
 
 // Load units when the page loads
 loadUnits();
+
+
+// Assuming data is fetched from Firebase and stored in a variable 'fetchedData'
+// var fetchedData = /* ... */;
+
+// Set the content of the div with id "content"
+
+
+// Auto resize images within the div
+function autoResizeImages() {
+    // Find all image elements within the content div
+    var images = document.querySelectorAll('#content img');
+
+    // Iterate through each image and resize it
+    images.forEach(function(img) {
+        autoResizeImage(img);
+    });
+}
+
+// Function to auto resize an image based on device width
+function autoResizeImage(img) {
+    if (img) {
+        // Set the image width based on the device width
+        var deviceWidth = Math.min(window.innerWidth, document.documentElement.clientWidth);
+        img.style.width = deviceWidth + 'px';
+    }
+}
+
+// Call the function to auto resize images after the content is set
+// autoResizeImages();
+// contentDiv.appendChild(theoryDiv);

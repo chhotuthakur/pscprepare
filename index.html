@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +11,38 @@
 </head>
 <body>
   
-    <nav class="navbar navbar-expand-sm bg-light">
-
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-          </li>
-        </ul>
-      
-      </nav>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/logo.png" alt=""></a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     
-     <div class="container">
+  <div  >
+    <div  ></div>
+</div>
+
+<div class="progress" id="progress-bar">
+  <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+</div>
 
         
       
@@ -39,6 +53,10 @@
     <div id="subNavbar">
         <!-- Navbar for chapters -->
     </div>
+   
+  <div >
+    <div ></div>
+  </div>
 
     <div id="content">
         <!-- Content area for theory, questions, and answers -->
@@ -47,7 +65,7 @@
     <div id="progress-bar">
         <div id="progress"></div>
     </div>
-</div>
+
 
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>

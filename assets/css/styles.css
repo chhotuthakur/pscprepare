@@ -22,7 +22,7 @@ body {
 #progress-bar {
     background-color: #ddd;
     height: 20px;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 #progress {
@@ -39,39 +39,56 @@ hr {
 	margin-bottom:25px;
 	}
 
-
-    #navbar, #subNavbar {
-        float: left;
+    #navbar,
+    #subNavbar {
+        /* float: left; */
         width: 100%;
         margin: 0;
         padding: 0;
+        margin-top: 1px;
         list-style: none;
-        background: #ccc;
-        border-bottom: 1px solid #999;
+        background: #0bc961;
+        /* border-bottom: 1px solid #999; */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent wrapping to the next line */
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     
-    #navbar li, #subNavbar li {
-        float: left;
+    #navbar li,
+    #subNavbar li {
+        float: none;
+        display: inline-block;
         margin: 0;
         padding: 0;
+    
+        list-style: none;
+        min-width: 100px; /* Set a minimum width to prevent compression */
     }
     
-    #navbar a, #subNavbar a {
-        float: left;
-        display: block;
+    #navbar a,
+    #subNavbar a {
+        float: none;
+        display: inline-block;
         padding: 6px 30px 6px 5px;
         text-decoration: none;
         font-weight: bold;
         font-size: 90%;
-        color: #666;
-        background: #ccc url(../img/slant.gif) no-repeat top right;
+        color: #ffffff;
+        background: #0bc961 url(../img/slant.gif) no-repeat top right;
     }
     
     #navbar .nav-1 a {
         padding-left: 20px;
     }
     
-    #navbar a:hover, #subNavbar a:hover {
-        color: #000;
+    #navbar a:hover,
+    #subNavbar a:hover {
+        color: #8f0303;
+    }
+    
+    .logo{
+        width: 40px;
+        height: auto;
     }
     
